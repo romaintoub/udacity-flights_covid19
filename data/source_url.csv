@@ -1,0 +1,30 @@
+name,url,source,description
+owid-covid-data,https://covid.ourworldindata.org/data/owid-covid-data.csv,ourworldindata,Collection of the COVID-19 data maintained by Our World in Data which collects it from John Hopkins University. Contains around 70 000 rows.
+airlines,https://raw.githubusercontent.com/jpatokal/openflights/master/data/airlines.dat,openflights,Information about more than 6000 airlines.
+countries,https://ourairports.com/data/countries.csv,ourairports,List of the world's countries with iso codes.
+airports,https://ourairports.com/data/airports.csv,ourairports,Information about all the airports in the world.
+flightlist_20190101_20190131,https://zenodo.org/record/4485741/files/flightlist_20190101_20190131.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20190201_20190228,https://zenodo.org/record/4485741/files/flightlist_20190201_20190228.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20190301_20190331,https://zenodo.org/record/4485741/files/flightlist_20190301_20190331.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20190401_20190430,https://zenodo.org/record/4485741/files/flightlist_20190401_20190430.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20190501_20190531,https://zenodo.org/record/4485741/files/flightlist_20190501_20190531.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20190601_20190630,https://zenodo.org/record/4485741/files/flightlist_20190601_20190630.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20190701_20190731,https://zenodo.org/record/4485741/files/flightlist_20190701_20190731.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20190801_20190831,https://zenodo.org/record/4485741/files/flightlist_20190801_20190831.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20190901_20190930,https://zenodo.org/record/4485741/files/flightlist_20190901_20190930.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20191001_20191031,https://zenodo.org/record/4485741/files/flightlist_20191001_20191031.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20191101_20191130,https://zenodo.org/record/4485741/files/flightlist_20191101_20191130.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20191201_20191231,https://zenodo.org/record/4485741/files/flightlist_20191201_20191231.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200101_20200131,https://zenodo.org/record/4485741/files/flightlist_20200101_20200131.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200201_20200229,https://zenodo.org/record/4485741/files/flightlist_20200201_20200229.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200301_20200331,https://zenodo.org/record/4485741/files/flightlist_20200301_20200331.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200401_20200430,https://zenodo.org/record/4485741/files/flightlist_20200401_20200430.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200501_20200531,https://zenodo.org/record/4485741/files/flightlist_20200501_20200531.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200601_20200630,https://zenodo.org/record/4485741/files/flightlist_20200601_20200630.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200701_20200731,https://zenodo.org/record/4485741/files/flightlist_20200701_20200731.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200801_20200831,https://zenodo.org/record/4485741/files/flightlist_20200801_20200831.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20200901_20200930,https://zenodo.org/record/4485741/files/flightlist_20200901_20200930.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20201001_20201031,https://zenodo.org/record/4485741/files/flightlist_20201001_20201031.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20201101_20201130,https://zenodo.org/record/4485741/files/flightlist_20201101_20201130.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20201201_20201231,https://zenodo.org/record/4485741/files/flightlist_20201201_20201231.csv.gz,opensky,All flights collected (version: 4485741)
+flightlist_20210101_20210131,https://zenodo.org/record/4485741/files/flightlist_20210101_20210131.csv.gz,opensky,All flights collected (version: 4485741)
