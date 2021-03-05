@@ -59,7 +59,6 @@ Sample record:
 * ```notebooks``` folder:
 	* ```process_dim_tables.ipynb```: Python notebook that reads the data from source and process the dimension tables, such as countries, airports and airlines.
 	* ```process_fact_tables.ipynb```: Python notebook that reads the data from source and process the fact tables, such as covid-19 and flights datasets.
-	* ```flights_v_covid_analysis.ipynb```: Python notebook that reads table to S3 to do a primarly analysis of the schema.
 * ```data```folder:
 	* ```source```folder: Folder containing all the source data, downloaded with ```source_to_s3.py```
 	* ```source_url.csv```: This table contains all the information about the dataset used as source.
