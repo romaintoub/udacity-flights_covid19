@@ -68,7 +68,7 @@ Sample record:
 
 ## Schema for Flights v. COVID-19 Analysis 
 
-![Flights and Covid-19 Schema](flights.jpg)
+![Flights and Covid-19 Schema](flights_covid19_schema.jpg)
 The final schema is a star schema. At the exception that there are 2 fact tables, the first one is the **flights** data that collects every flights per day and the other one is the **covid19** dataset that collects the number of cases per day as well. I chose this data model because it provides many benefits. Since this model has two fact tables and three dimension tables, it provides the final user greater flexibility, allowing them to perform a variety of different queries. Even if combining the two fact tables requires some aggregation with the date and the countries, it necessitates less joins than a normalized transactional schema, and as result, is more efficient and query performance is much better.
 
 ## Data Dictionnary 
