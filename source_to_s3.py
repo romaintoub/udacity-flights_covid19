@@ -92,8 +92,8 @@ def process_airlines( spark, output_data):
     print("Number of rows: ", airlines_table.count())
     quality_checks( airlines_table)
 
-    # print("Airlines table to S3...")
-    # airlines_table.write.parquet( output_data + 'airlines/', mode='overwrite')
+    print("Airlines table to S3...")
+    airlines_table.write.parquet( output_data + 'airlines/', mode='overwrite')
 
 
 def process_airports( spark, input_data, output_data):
@@ -148,14 +148,14 @@ def process_airports( spark, input_data, output_data):
     airports_code = airports_table.select('ident', 'iso_country')
     quality_checks( airports_code)
     print(f"Airports code table to S3...")
-    # airports_code.write.parquet( input_data + '/airports_code/', mode='overwrite')
+    airports_code.write.parquet( input_data + '/airports_code/', mode='overwrite')
     
     airports_table.printSchema()
     print( "Number of rows:", airports_table.count())
     quality_checks( airports_table)
 
-    # print(f"Airports table to S3...")
-    # airports_table.write.parquet( output_data + 'airports/', mode='overwrite')
+    print(f"Airports table to S3...")
+    airports_table.write.parquet( output_data + 'airports/', mode='overwrite')
 
 
 def process_countries( spark, output_data):
@@ -217,8 +217,8 @@ def process_countries( spark, output_data):
     print("Total number of rows: ", countries_table.count())
     quality_checks( countries_table)
 
-    # print(f"Countries table to S3...")
-    # countries_table.write.parquet( output_data + 'countries/', mode='overwrite')
+    print(f"Countries table to S3...")
+    countries_table.write.parquet( output_data + 'countries/', mode='overwrite')
 
 
 def process_opensky( spark, input_data, output_data):
@@ -300,8 +300,8 @@ def process_opensky( spark, input_data, output_data):
     print("Number of rows: ", flightlist_table.count())
     quality_checks( flightlist_table)
 
-    # print(f"Flightlist table to S3...")
-    # flightlist_table.write.parquet( output_data + 'flightlist/', mode='overwrite', partitionBy=['year','month'])
+    print(f"Flightlist table to S3...")
+    flightlist_table.write.parquet( output_data + 'flightlist/', mode='overwrite', partitionBy=['year','month'])
 
 
 def process_covid( spark, output_data):
@@ -343,8 +343,8 @@ def process_covid( spark, output_data):
     print("Number of rows: ", covid19_table.count())
     quality_checks( covid19_table)
 
-    # print("Covid19 table to S3...")
-    # covid19_table.write.parquet( output_data + 'covid19/', mode='overwrite')
+    print("Covid19 table to S3...")
+    covid19_table.write.parquet( output_data + 'covid19/', mode='overwrite')
 
 
 def main():
