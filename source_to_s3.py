@@ -52,7 +52,7 @@ def quality_checks(data_table_name):
 def process_airlines( spark, output_data):
     """
     Process airlines data
-    1. Load airlines.csv
+    1. Download airlines.csv
     2. Cleaning
     3. Quality Check
     4. Write airlines_table to S3
@@ -99,7 +99,7 @@ def process_airlines( spark, output_data):
 def process_airports( spark, input_data, output_data):
     """
     Process airports data
-    1. Load airports.csv
+    1. Download airports.csv
     2. Cleaning
     3. Select airports_code and write it to S3 as a staging table
     4. Quality checks airports_table
@@ -161,8 +161,8 @@ def process_airports( spark, input_data, output_data):
 def process_countries( spark, output_data):
     """
     Process countries
-    1. Load countries.csv
-    2. Load covid19.csv
+    1. Download countries.csv
+    2. Download covid19.csv
     3. Join the two tables with the name of the country as the key
     4. Create a table with the join
     5. Quality checks
@@ -224,20 +224,7 @@ def process_countries( spark, output_data):
 def process_opensky( spark, input_data, output_data):
     """
     Process Opensky 
-    1. Load all the flights data    
-        * For one file:
-        # flightlist = load_source_url('flightlist_20201201_20201231', gzip=True)
-        # print( flightlist)
-        ...
-        load( flightlist.path)
-
-        * For multiple files:
-        df = pd.read_csv('./data/source_url.csv', index_col='name')
-        opensky = df.loc[ df.index.str.contains('flightlist')]
-        for idx in range( len(opensky)):
-            download_and_cache( opensky.iloc[idx].name, gzip=True)
-        ...
-        load( './data/source/flightlist*')
+    1. Download and load all the flights data    
     2. Cleaning
     3. Join with airport_codes table from staging to add iso_code for countries of origin and destination
     4. Cleaning
@@ -247,7 +234,7 @@ def process_opensky( spark, input_data, output_data):
     flightlists = pd.read_csv('./data/source_url.csv', index_col='name')
     opensky = flightlists.loc[ flightlists.index.str.contains('flightlist')]
     for idx in range( len(opensky)):
-        download_and_cache( opensky.iloc[idx].name, opensky.iloc[idx].url)
+        download_and_cache( opensky.iloc[idx].name + '.csv.gz', opensky.iloc[idx].url)
 
     schema = StructType([
                 StructField( "callsign", StringType(), True),

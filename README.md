@@ -160,6 +160,8 @@ The final schema is a star schema. At the exception that there are 2 fact tables
 1. Start a Spark Session 
 2. Clean raw data, create dimension tables, quality check and save to parquet: 
 	* ```airlines```
+		* Download airlines dataset from url in ```source_url.csv```.
+		* Load airlines csv file with Spark.
 		* Use schema structure to cast column types.
 		* Check if _icao_ and _iata_ columns are alpha-numeric or set the values to null.
 		* Drop null values and duplicates in _icao_ column to create a primary key.
@@ -167,6 +169,8 @@ The final schema is a star schema. At the exception that there are 2 fact tables
 		* Run quality check.
 		* Save to parquet for downstream query.
 	* ```airports```
+		* Download airports dataset from url in ```source_url.csv```.
+		* Load airports csv file with Spark.
 		* Use schema structure to cast column types.
 		* Cast _scheduled_service_ to Boolean by replacing 'yes' values by True.
 		* Drop null values and duplicates in _ident_ column to create a primary key.
@@ -176,14 +180,18 @@ The final schema is a star schema. At the exception that there are 2 fact tables
 		* Run quality check on both tables.
 		* Save to parquet for downstream query.
 	* ```countries```
+		* Download countries dataset from url in ```source_url.csv```.
+		* Load countries csv file with Spark.
 		* Use schema structure to cast column types.
 		* Drop null values and duplicates in _iso_code2_ column to create a primary key.
+		* Download covid19 dataset from url in ```source_url.csv```.
 		* Load covid19.csv file to collect _iso_code3_ with _location_ key.
 		* Left join countries with covid19 on the name of the country. 
 		* Select the right columns to create the table.
 		* Run quality check.
 		* Save to parquet for downstream query.
 	* ```covid19```
+		* Load covid19.csv file in source with Spark.
 		* Drop duplicates in _iso_code_ and _date_ columns
 		* Check if _iso_code3_ is alpha-numeric or set the values to null.
 		* Drop null values in _iso_code3_ and _location_ columns.
@@ -192,6 +200,8 @@ The final schema is a star schema. At the exception that there are 2 fact tables
 		* Run quality check.
 		* Save to parquet for downstream query.
 	* ```flights```
+		* Download all the flightlist dataset from urls in ```source_url.csv```. Requires around 4GB storage (and a little bit time to download).
+		* Load all the flight files with Spark.
 		* Use schema structure to cast column types.
 		* Drop null values in _day_ column.
 		* Drop rows if both _origin_ and _destination_ columns are null (for the following join).
